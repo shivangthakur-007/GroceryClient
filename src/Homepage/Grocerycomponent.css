@@ -1,0 +1,76 @@
+.bfr {
+  padding: 0 12px;
+}
+
+.bfr::before {
+  width: 1px;
+  height: 190px;
+  position: absolute;
+  left: 15px;
+  top: 70px;
+  background: #2a2a2a;
+  color: #5f6871;
+  line-height: 29px;
+  box-sizing: border-box;
+  /* padding: 0px 12px; */
+  content: "";
+}
+
+.bgicon::before {
+  content: url(../../../assets/Images/rightarrow.svg);
+  box-sizing: border-box;
+  position: absolute;
+  left: 3.1rem;
+}
+
+.lipad {
+  padding: 16px 45px 16px 22.5px;
+  background-color: #fff;
+  /* margin: 2px 0; */
+  color: #151414;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-align: start;
+}
+
+.lipad:hover {
+  background-color: #26901b;
+  color: #fff;
+}
+
+.grainsbg::before {
+  position: absolute;
+  opacity: 0.2;
+  z-index: 1;
+  content: "";
+  width: 194px;
+  height: 194px;
+  background-color: #fff;
+  border-radius: 50%;
+  left: 27rem;
+}
+.grainsbg2::before {
+  position: absolute;
+  opacity: 0.2;
+  z-index: 0.7;
+  content: "";
+  width: 194px;
+  height: 194px;
+  background-color: #fff;
+  border-radius: 50%;
+  right: 2.5rem;
+}
+
+.slashhover::before {
+  position: absolute;
+  content: '/';
+  width: auto;
+  right: -21px;
+}
+
+.searchbef::before{
+  content: url(../../../assets/Images/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg);
+  position: absolute;
+  left: 1.1rem;
+  bottom: 0.4rem;
+}
