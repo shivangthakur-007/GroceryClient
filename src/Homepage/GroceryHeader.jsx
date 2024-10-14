@@ -72,19 +72,19 @@ function GroceryHeader() {
             </div>
             <ul className="flex mx-[30px] justify-around gap-8 text-[#555555] font-medium text-[18px]">
               <a href="">
-                <li>Home</li>
+                <li className='hover:text-[#26901B]'>Home</li>
+              </a>
+              <a href="/about">
+                <li className='hover:text-[#26901B]'>About</li>
               </a>
               <a href="">
-                <li>About</li>
+                <li className='hover:text-[#26901B]'>Contact</li>
               </a>
               <a href="">
-                <li>Contact</li>
+                <li className='hover:text-[#26901B]'>Blog</li>
               </a>
               <a href="">
-                <li>Blog</li>
-              </a>
-              <a href="">
-                <li>Cart</li>
+                <li className='hover:text-[#26901B]'>Cart</li>
               </a>
             </ul>
           </div>
