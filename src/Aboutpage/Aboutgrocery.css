@@ -1,0 +1,6 @@
+.homebefore::after {
+  content: url(./../../src/assets/Images/chevronright.svg);
+  position: relative;
+  top: 4.5px;
+}
+

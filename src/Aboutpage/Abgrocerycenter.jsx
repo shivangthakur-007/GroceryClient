@@ -7,14 +7,10 @@ function Abgrocerycenter() {
   return (
     <>
       <div className="mt-[12px]">
-        <ul className="flex items-center py-[30px] px-[12px]">
-          <li className="">
-            <a href="/" className="homebefore">
-              Home
-            </a>
-          </li>
-          <li className="text-[#FFB41B]">About</li>
-        </ul>
+        <div className="flex items-center py-[30px] px-[12px]">
+          <a href="/" className="homebefore">Home</a>
+          <span className="text-[#FFB41B]">About</span>
+        </div>
       </div>
       <div className="flex items-center px-[12px] w-[100%]">
         <div className="flex">

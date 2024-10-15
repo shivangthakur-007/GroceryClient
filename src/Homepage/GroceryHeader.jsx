@@ -77,7 +77,7 @@ function GroceryHeader() {
               <a href="/about">
                 <li className='hover:text-[#26901B]'>About</li>
               </a>
-              <a href="">
+              <a href="/contact">
                 <li className='hover:text-[#26901B]'>Contact</li>
               </a>
               <a href="">
