@@ -71,7 +71,7 @@ function GroceryHeader() {
               <GoChevronDown size={20} />
             </div>
             <ul className="flex mx-[30px] justify-around gap-8 text-[#555555] font-medium text-[18px]">
-              <a href="">
+              <a href="/">
                 <li className='hover:text-[#26901B]'>Home</li>
               </a>
               <a href="/about">
@@ -80,7 +80,7 @@ function GroceryHeader() {
               <a href="/contact">
                 <li className='hover:text-[#26901B]'>Contact</li>
               </a>
-              <a href="">
+              <a href="/blog">
                 <li className='hover:text-[#26901B]'>Blog</li>
               </a>
               <a href="">
