@@ -7,6 +7,7 @@ import Grocerytrack from "./Homepage/TrackingOrder/Grocerytrack";
 import GroceryCheckout from "./Homepage/Grocery components/Checkout/groceryCheckout";
 import Aboutgrocery from "../src/Aboutpage/Aboutgrocery";
 import Contactpage from "./Contactpage/Contactpage";
+import Blogs from "./Blogs/blogs";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/checkout" element={<GroceryCheckout />} />
         <Route path="/order-tracking" element={<Grocerytrack />} />
         <Route path="/contact" element={<Contactpage />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </QueryClientProvider>

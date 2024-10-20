@@ -80,7 +80,7 @@ function GroceryHeader() {
               <a href="/contact">
                 <li className='hover:text-[#26901B]'>Contact</li>
               </a>
-              <a href="/blog">
+              <a href="/blogs">
                 <li className='hover:text-[#26901B]'>Blog</li>
               </a>
               <a href="">
