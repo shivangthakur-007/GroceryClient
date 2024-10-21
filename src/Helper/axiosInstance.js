@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const Base_url = "https://newsapsite-server.onrender.com/api/vi";
-const Base_url = "http://localhost:5014/api/vi";
+const Base_url = "https://grocery-server-qbgg.onrender.com/api/vi/";
 
 const axiosInstance= axios.create();
 
