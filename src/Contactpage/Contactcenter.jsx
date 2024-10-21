@@ -47,7 +47,7 @@ function Contactcenter() {
         </form>
       </div>
       <div className="flex justify-end p-[10px]">
-        <img src={imgtab_2} alt="img_tab_2" width={550} className="p-[10px]"/>
+        <img src={imgtab_2} alt="img_tab_2" width={550} className="p-[10px]" />
       </div>
     </div>
   );

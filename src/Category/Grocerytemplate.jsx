@@ -12,7 +12,7 @@ function Grocerytemplate() {
   if (isLoading) {
     <h2>Loading...</h2>;
   }
-  if (isError) {
+  if (isError) {  
     <h2>{error.message}</h2>;
   }
   // console.log(data?.data.products)

@@ -19,7 +19,7 @@ function GroceryHeader() {
             </a>
           </div>
           <div className="flex items-center gap-2">
-            <h3>Wishlisht</h3>
+            <h3>Wishlist</h3>
             <span>|</span>
             <a href='/checkout'>Checkout</a>
           </div>

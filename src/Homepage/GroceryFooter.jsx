@@ -27,7 +27,9 @@ function GroceryComponents() {
             </div>
           </div>
           <div className="bfr relative pl-[70px] ">
-            <h2 className="text-[26px] font-semibold">Quick Links</h2>
+            <h2 className="text-[26px] text-white text-2xl font-semibold">
+              Quick Links
+            </h2>
             <ul className="flex flex-col gap-4">
               <a className="flex text-[17px] font-semibold bgicon" href="">
                 <li>Home</li>
@@ -47,7 +49,7 @@ function GroceryComponents() {
             </ul>
           </div>
           <div className="bfr relative pl-[70px]">
-            <h2>Catagories</h2>
+            <h2 className="text-white text-2xl font-semibold">Categories</h2>
             <ul className="flex flex-col gap-4">
               <a href="" className="bgicon flex text-[17px] font-semibold">
                 <li>Vegetables & Fruit</li>
@@ -76,7 +78,7 @@ function GroceryComponents() {
             </ul>
           </div>
           <div className="bfr relative pl-[70px]">
-            <h3>Contact Us</h3>
+            <h3 className="text-white text-2xl font-semibold">Contact Us</h3>
             <ul>
               <li>Address: 1026, Sector-9, Gurgaon-122001</li>
               <li>Email: dailyusedelivery@gmail.com</li>
@@ -99,7 +101,7 @@ function GroceryComponents() {
           </div>
         </div>
         <div className="flex">
-          <div>
+          <div className="flex items-center">
             <FaCopyright />
             2024 Daily Use Delivery Store. All Rights Reserved.
           </div>

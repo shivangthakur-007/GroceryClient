@@ -1,10 +1,12 @@
-import React from 'react'
+import React from "react";
 import "./Grocerycomponent.css";
 import off1 from "../assets/Images/off-1.webp";
 import off2 from "../assets/Images/off-2.webp";
 import frozenFoods from "../assets/Images/menu-14.svg";
-import { GoArrowRight, GoChevronDown, GoChevronLeft, GoChevronRight, GoChevronUp } from 'react-icons/go';
-import Grocerytemplate from '../Category/Grocerytemplate';
+import carousel from "../assets/Images/aboutimage.jpg";
+import { GoArrowRight, GoChevronDown, GoChevronUp } from "react-icons/go";
+import Grocerytemplate from "../Category/Grocerytemplate";
+import Carousel from "./Carousel/Carousel";
 
 function Grocerycenter() {
   return (
@@ -177,19 +179,21 @@ function Grocerycenter() {
       </section>
       <main className="pb-[60px] pt-[20px]">
         <div className="px-[12px">
-          <h2 className="text-[30px] text-[#151414] font-semibold">
-            Recent News
-          </h2>
-        </div>
-        <div>
-          {/* Card */}
+          <div className="flex items-center justify-between">
+            <h2 className="text-[30px] text-[#151414] font-semibold">
+              Recent News
+            </h2>
+            <div>
+              
+            </div>
+          </div>
           <div>
-            <GoChevronLeft />
-            <GoChevronRight />
-            <div></div>
+            {/* carousel */}
+            <Carousel />
+            {/* Carousel */}
           </div>
         </div>
-      </main>{" "}
+      </main>
       <nav className="px-[12px] pt-[15px] pb-[10px] py-[10px]">
         <button className="px-[4rem] w-[100%]">
           <span className="text-[#000000] bg-[#b0b0b138] text-start pt-[20px] pr-[30px] pb-[18px] p-[10px] block text-[16px] font-semibold">
@@ -201,4 +205,4 @@ function Grocerycenter() {
   );
 }
 
-export default Grocerycenter
+export default Grocerycenter;
