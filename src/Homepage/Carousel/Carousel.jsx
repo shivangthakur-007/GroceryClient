@@ -35,18 +35,18 @@ function Carousel() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full pl-[12px]">
       {/* Scroll left button */}
       <button
         onClick={scrollLeft}
-        className="absolute right-14 top-[-30px] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 z-10 rounded-3xl mx-2"
+        className="absolute right-14 top-[-30px] transform -translate-y-1/2 bg-white hover:bg-[#26901b] border-2 border-slate-200 hover:font-semibold text-slate-200 px-4 py-2 z-10 rounded-3xl mx-2"
       >
         ❮
       </button>
 
       {/* Scrollable container */}
       <div
-        className="grid grid-flow-col gap-4 overflow-x-hidden p-2 w-[100%] scrollbar-hide"
+        className="grid grid-flow-col gap-4 overflow-x-hidden p-2 w-[100%] scrollbar-hide pt-[25px]"
         ref={carouselRef}
       >
         {data?.data.Blogs?.map((blog) => (
@@ -57,7 +57,7 @@ function Carousel() {
       {/* Scroll right button */}
       <button
         onClick={scrollRight}
-        className="absolute right-3 top-[-30px] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 z-10 rounded-3xl"
+        className="absolute right-3 top-[-30px] transform -translate-y-1/2 bg-white hover:bg-[#26901b] hover:font-semibold border-2 border-slate-200 text-slate-200 px-4 py-2 z-10 rounded-3xl"
       >
         ❯
       </button>

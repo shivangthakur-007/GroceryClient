@@ -2,10 +2,9 @@ import React from 'react'
 
 const CarouselCard = ({ data }) => {
   return (
-    <div className='mx-2 border-box flex-shrink-0 w-[40rem]'>
+    <div className='mx-2 w-[25rem] flex flex-col items-center h-[31rem] shadow-custom'>
       <img
-        width={450}
-        height={460}
+        sizes={500}
         src={data?.image?.secure_url}
         alt={data?.image?.public_id}
         className="rounded-md"
