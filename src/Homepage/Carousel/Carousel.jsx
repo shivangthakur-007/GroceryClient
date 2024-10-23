@@ -1,68 +1,66 @@
 import React, { useState } from "react";
+import { useQuery } from "react-query";
+import axiosInstance from "../../Helper/axiosInstance";
+import CarouselCard from "./CarouselCard";
 
 function Carousel() {
-  const images = [
-    "https://via.placeholder.com/800x400?text=Slide+1",
-    "https://via.placeholder.com/800x400?text=Slide+2",
-    "https://via.placeholder.com/800x400?text=Slide+3",
-    "https://via.placeholder.com/800x400?text=Slide+4",
-  ];
-  // Array of images (you can replace the URLs with your own images)
+  const Blogstemplate = () => {
+    return useQuery(["/blogs"], () => {
+      return axiosInstance.get("/blogs");
+    });
+  };
+  const { isloading, data, isError, error } = Blogstemplate();
+  if (isloading) {
+    <h2>loading...</h2>;
+  }
+  if (isError) {
+    <h2>{error.message}</h2>;
+  }
+  // console.log(data?.data)
+  // Ref for the scrollable container
+  const carouselRef = React.useRef(null);
 
-  // State to keep track of the active index
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Function to go to the previous slide
-  const prevSlide = () => {
-    const newIndex = (currentIndex - 1 + images.length) % images.length;
-    setCurrentIndex(newIndex);
+  // Scroll to the left
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+    }
   };
 
-  // Function to go to the next slide
-  const nextSlide = () => {
-    const newIndex = (currentIndex + 1) % images.length;
-    setCurrentIndex(newIndex);
+  // Scroll to the right
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+    }
   };
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      {/* Carousel wrapper */}
-      <div className="relative overflow-hidden rounded-lg">
-        {/* Render the current slide */}
-        <img
-          src={images[currentIndex]}
-          alt={`Slide ${currentIndex + 1}`}
-          className="w-full h-96 object-cover"
-        />
-      </div>
-      <div>
-        {/* Left Arrow */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-0 z-10 p-2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full focus:outline-none"
-        >
-          ❮
-        </button>
+    <div className="relative w-full">
+      {/* Scroll left button */}
+      <button
+        onClick={scrollLeft}
+        className="absolute right-14 top-[-30px] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 z-10 rounded-3xl mx-2"
+      >
+        ❮
+      </button>
 
-        {/* Right Arrow */}
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-0 z-10 p-2 transform -translate-y-1/2 bg-gray-800 text-white rounded-full focus:outline-none"
-        >
-          ❯
-        </button>
-      </div>
-      {/* Dots for navigation (optional) */}
-      {/* <div className="flex justify-center mt-4 space-x-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full ${
-              index === currentIndex ? "bg-gray-800" : "bg-gray-400"
-            }`}
-          />
+      {/* Scrollable container */}
+      <div
+        className="grid grid-flow-col gap-4 overflow-x-hidden p-2 w-[100%] scrollbar-hide"
+        ref={carouselRef}
+      >
+        {data?.data.Blogs?.map((blog) => (
+          <CarouselCard key={blog._id} data={blog} />
         ))}
-      </div> */}
+      </div>
+
+      {/* Scroll right button */}
+      <button
+        onClick={scrollRight}
+        className="absolute right-3 top-[-30px] transform -translate-y-1/2 bg-gray-800 text-white px-4 py-2 z-10 rounded-3xl"
+      >
+        ❯
+      </button>
     </div>
   );
 }
